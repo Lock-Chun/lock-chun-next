@@ -34,3 +34,23 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Stack
+- Next.js
+- PostgreSQL
+- Tailwind, React
+- TypeScript
+- AWS
+
+## Home Page
+- Hours and phone number should be displayed as soon as you get there
+- Location Button / Google Map integration
+- Menu Button to go to menu
+- Maybe reviews button / yelp / google to redirect
+- Rotating / clickable photo portfolio
+
+## Menu Page
+- Full menu, pictures
+- Search bar
+- have a need recommendations button at the bottom, redirect to chatbot page or something
