@@ -38,10 +38,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Stack
 - Next.js
-- PostgreSQL
+- SSG
 - Tailwind, React
 - TypeScript
 - AWS
+- Chatbot (Gemini/OpenAI, Redis, Kafka)
 
 ## Home Page
 - Hours and phone number should be displayed as soon as you get there
@@ -54,3 +55,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - Full menu, pictures
 - Search bar
 - have a need recommendations button at the bottom, redirect to chatbot page or something
+
+### Resume
+- Transfered website from database to SSG and made the site load 80% faster
