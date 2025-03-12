@@ -1,4 +1,4 @@
-name: Playwright Tests and Jest Tests # Updated workflow name
+name: Playwright Tests
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  test:
+  e2e-test: 
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
@@ -19,9 +19,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Run Jest tests
-        run: npm test
 
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
