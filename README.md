@@ -43,6 +43,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - TypeScript
 - AWS
 - Chatbot (Gemini/OpenAI, Redis, Kafka)
+- CI/CD stuff using github actions, maybe jenkins
+- jest unit testing, react testing library
+- Playwright for E2E and API testing
 
 ## Home Page
 - Hours and phone number should be displayed as soon as you get there
@@ -58,3 +61,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ### Resume
 - Transfered website from database to SSG and made the site load 80% faster
+- Redesigned website
+
+Features:
+- Menu - Search - Filter - AI chatbot
+- Separate category pages 
+- Location using Google Maps
+- Photos - maybe of stuff using ai idk - rotating photos or slide show - manually upload if we cant get api access
+- Contact us at phone number
+- Yelp, scrap Google photos or something maybe - requested api access, maybe need to scrap with apify
+- Directions - Google map, build like pathway to restaurant - just have a link
+- Reviews 
+- Multilingual support using AI
+- Dark mode
