@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "test:e2e": "playwright test",
+    "test:clear-cache": "jest --clearCache"
   },
   "dependencies": {
     "next": "15.2.0",

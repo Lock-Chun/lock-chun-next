@@ -25,7 +25,8 @@ const config: Config = {
 
   testPathIgnorePatterns: [
     "/node_modules/",
-    "<rootDir>/tests/e2e/", // Add this line to ignore the e2e directory
+    "<rootDir>/tests/e2e/",
+    '/tests/jest-setup.ts'
   ],
 
   // Automatically clear mock calls, instances, contexts and results before every test
@@ -39,6 +40,11 @@ const config: Config = {
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
+
+  // Check to see if environment is set up
+  setupFilesAfterEnv: ['<rootDir>/tests/jest-setup.ts'],
+
+  moduleNameMapper: {'^@/(.*)$': '<rootDir>/src/$1'},
 };
 
 export default config;
