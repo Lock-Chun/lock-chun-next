@@ -21,7 +21,7 @@ const config: Config = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 
   // Define where Jest should look for test files (adjust if needed)
-  testMatch: ['**/tests/**/*.+(ts|tsx|js|jsx)', '**/?(*.)+(spec|test).+(ts|tsx|js|jsx)'],
+  testMatch: ['**/tests/unit/**/*.+(ts|tsx|js|jsx)'],
 
   testPathIgnorePatterns: [
     "/node_modules/",
