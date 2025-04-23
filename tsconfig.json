@@ -15,7 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", // This should ALWAYS BE "react-jsx", I am not sure why it is changing to preserve
     "incremental": true,
     "plugins": [
       {

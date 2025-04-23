@@ -62,6 +62,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ### Resume
 - Transfered website from database to SSG and made the site load 80% faster
 - Redesigned website
+- Setup mailing (idk, security, not very useful for SWE)
+- Integrate like 600+ photos and 1000+ reviews and process the data with an AI or something or from framework to process it
+- Chatbot, translate
 
 Features:
 - Menu - Search - Filter - AI chatbot
