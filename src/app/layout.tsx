@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Crimson_Text } from "next/font/google";
 import "./globals.css";
+//import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const crimson = Crimson_Text({
   weight: '400',
@@ -21,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${crimson.className} antialiased`}
-      >
+        className={`${crimson.className} antialiased`}>
+          {/* <GoogleAnalytics /> */}
         {children}
       </body>
     </html>
