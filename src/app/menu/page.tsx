@@ -30,7 +30,12 @@ export default function MenuPage() {
     fetchMenu();
   }, []);
 
-  if (!menu) return <p className="text-center text-gray-600">Loading menu...</p>;
+  if (!menu) return (
+    <main>
+      <Navbar />
+      <p className="text-center text-(--foreground)">Loading menu...</p>
+    </main>
+  );
 
   return (
     <main>
