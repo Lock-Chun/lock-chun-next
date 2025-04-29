@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #efebda;
-  --foreground: #171717;
-  --mobileNavbarSelected: #868479;
+  --background: #fafaf9;
+  --foreground: #292524;
+  --mobileNavbarSelected: #676463;
 }
 
 body {
