@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Crimson_Text } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 //import GoogleAnalytics from "./components/GoogleAnalytics";
 
-const crimson = Crimson_Text({
-  weight: '400',
-  subsets: ['latin'],
-  display: 'swap',
+const font = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,10 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <meta className="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <body
-        className={`${crimson.className} antialiased`}>
-          {/* <GoogleAnalytics /> */}
+      <meta
+        className="viewport"
+        content="width=device-width, initial-scale=1.0"></meta>
+      <body className={`${font.className} antialiased`}>
+        {/* <GoogleAnalytics /> */}
         {children}
       </body>
     </html>
