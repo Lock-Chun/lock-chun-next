@@ -10,7 +10,7 @@ export default function Home() {
   )}`;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-[77px]"> {/* Adjusted for Navbar height */}
       <Navbar />
 
       {/* Hero Section with Gradient Overlay */}

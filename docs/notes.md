@@ -29,6 +29,9 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
     - const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
     - const result = await model.generateContent('Hello AI');
 
+  import Script from 'next/script';
+  - Imports Script from Next.js that optimizes 3rd party scripts like Google Analytics
+
 ## Typescript
 
 Constant vs Let
@@ -37,6 +40,15 @@ Constant vs Let
 - However, a const object can still be changed though.
     - so a const String can't be changed, but a const object can (so immutable types declared on const can't change)
     - but a let String can (so even an immutable type can change, but it still follows the same rules as java String vs StringBuilder)
+
+## React
+export const GoogleAnalytics = () => {
+- A react component that injects Google Analytics script into the webpage
+- = () => is the same as () apparently...
+- Has some differences with .this idk
+
+Header />
+- how you load things in react, any component
 
 ## Other
 
@@ -48,3 +60,7 @@ menuData = JSON.stringify(JSON.parse(rawMenuData), null, 2);
 
 any
 - means you don't know or care what type it is, skip type checking, initalizing it later
+
+Script
+- Component to load from Google and Initializing the script
+

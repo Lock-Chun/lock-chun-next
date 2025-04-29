@@ -77,3 +77,18 @@ Features:
 - Reviews 
 - Multilingual support using AI
 - Dark mode
+
+AI/ML
+- Currently we call a provider
+- Eventually if we are interested, we can train our own Huggingface model or something for food.
+- For simplicity, calling an LLM is cheaper than a dedicated model.
+
+Dynamic Photos/Reviews
+- SSG Strategy: Since you're using SSG, fetch the data in getStaticProps (Pages Router) or via server-side fetching mechanisms in the App Router. Use Incremental Static Regeneration (ISR) with a reasonable revalidation time (e.g., every few hours or once a day) to keep the data fresh without hitting API limits excessively on every request.
+
+Future:
+- We could over complicate our message queues with the AI chatbot with Kafka or RabbitMQ
+- Could do data processing reviews and photos with Spark
+- Chatbot that returns photos?
+
+SEO Optimization
