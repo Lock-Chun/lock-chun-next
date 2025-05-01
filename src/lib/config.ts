@@ -1,4 +1,3 @@
-// /lib/config.ts
 import dotenv from "dotenv";
 import path from "path";
 
@@ -14,13 +13,10 @@ export const config = {
     llmModel: "gemini-1.5-flash",
     embeddingModel: "text-embedding-004",
     relevanceThreshold: 0.4,
-    retrieverK: 14, // Increased K value
-    // Anchor phrase for relevance checking
+    retrieverK: 14, 
     relevanceAnchorPhrase: "Lock Chun Chinese Cuisine food dishes prices hours location ordering reservations menu items restaurant greetings lunch specials family dinners"
-} as const; // Using 'as const' for stricter type inference
+} as const; 
 
-// --- Runtime Validation ---
-// Ensure critical environment variables are loaded
 if (!config.googleApiKey) {
     console.error("FATAL ERROR: GOOGLE_API_KEY environment variable is not set.");
     throw new Error("GOOGLE_API_KEY missing");
@@ -31,8 +27,3 @@ if (!config.redisUrl) {
 }
 
 console.log("Configuration loaded successfully.");
-
-// Optionally export individual values if preferred for cleaner imports elsewhere
-// export const GOOGLE_API_KEY = config.googleApiKey;
-// export const REDIS_URL = config.redisUrl;
-// export const REDIS_INDEX_NAME = config.redisIndexName;

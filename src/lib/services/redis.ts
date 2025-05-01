@@ -1,9 +1,8 @@
-// /lib/services/redis.ts
 import { createClient } from 'redis';
-import type { RedisClientType } from "redis"; // Import type separately
+import type { RedisClientType } from "redis"; 
 import { RedisVectorStore } from "@langchain/redis";
-import { embeddings } from "./googleAI"; // Import embeddings instance
-import { config } from "@/lib/config"; // Import config
+import { embeddings } from "./googleAI"; 
+import { config } from "@/lib/config"; 
 
 // Module-level state for singleton instances and initialization status
 let redisClientInstance: RedisClientType | undefined;

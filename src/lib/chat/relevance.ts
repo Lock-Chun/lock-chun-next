@@ -1,6 +1,5 @@
-// /lib/chat/relevance.ts
-import { embeddings } from "@/lib/services/googleAI"; // Import embeddings instance
-import { config } from "@/lib/config"; // Import config
+import { embeddings } from "@/lib/services/googleAI";
+import { config } from "@/lib/config"; 
 
 // Define keywords for quick relevance check
 const KEY_TERMS = [
@@ -8,7 +7,7 @@ const KEY_TERMS = [
   "chicken", "beef", "shrimp", "soup", "hours", "time", "open", "close",
   "reservation", "reserve", "pickup", "order", "phone", "location",
   "address", "directions", "lunch", "family", "dinner",
-  "food", // <-- Added "food" here
+  "food", 
 ];
 
 // Define terms indicating a greeting
@@ -48,7 +47,6 @@ export function isGreeting(query: string): boolean {
 export async function isRelevant(question: string): Promise<boolean> {
   // 1. Keyword Check (Fastest)
   if (hasKeyword(question)) {
-    // console.log(`Keyword match found for: "${question}"`); // Optional debug log
     return true;
   }
 
@@ -83,21 +81,12 @@ export async function isRelevant(question: string): Promise<boolean> {
 
     const similarity = dotProduct / (questionMagnitude * anchorMagnitude);
 
-    // console.log(`Semantic relevance score for "${question}": ${similarity.toFixed(3)}`); // Debugging
-
     // Check against the threshold from config
     const isSemanticallyRelevant = similarity > config.relevanceThreshold;
-    // if (isSemanticallyRelevant) {
-    //     console.log(`Semantic match found for: "${question}"`); // Optional debug log
-    // } else {
-    //     console.log(`No keyword or sufficient semantic match for: "${question}"`); // Optional debug log
-    // }
     return isSemanticallyRelevant;
 
   } catch (error: unknown) {
-      // Log error during embedding or calculation
       console.error(`Error during relevance embedding/calculation for question "${question}":`, error);
-      // Default to not relevant if embedding or calculation fails
       return false;
   }
 }

@@ -6,7 +6,7 @@ This project implements a chatbot backend for "Lock Chun Chinese Cuisine" using 
 
 *   **Restaurant-Specific:** Answers questions only within the scope of Lock Chun Chinese Cuisine.
 *   **Contextual Answers (RAG):** Retrieves relevant menu sections from a vector database (Redis) to provide accurate, grounded answers about menu items and prices.
-*   **Relevance Gate:** Filters out off-topic questions using a multi-layered approach (greetings, keywords, semantic similarity).
+*   **Relevance Gate:** Filters out off-topic questions using a multi-layered approach (greetings, keywords, semantic similarity with cosine distance).
 *   **Specific Rules Handling:** Provides exact, pre-defined answers for common queries like hours, location, reservation policy, and ordering details when not directly found in the menu context.
 *   **Greeting Support:** Recognizes and responds to common greetings.
 *   **Basic Security Filter:** Attempts to block requests asking the bot to act outside its defined role or ignore instructions.
@@ -171,9 +171,14 @@ flowchart TD
 2.  **Security/Role-Play Filter:** Block attempts to manipulate the bot's persona.
 3.  **Greeting Shortcut:** Handle simple greetings efficiently.
 4.  **Relevance Gate:**
-    *   Check for keywords (fast).
-    *   If no keywords, use **semantic similarity** via embeddings (slower but catches more nuance). Embed user query, compare to anchor embedding, check threshold.
-    *   Refuse if irrelevant.
+    *   **Keyword Check:** First, quickly check if the user's message contains any predefined keywords (e.g., "menu", "hours", "location"). This is a fast initial filter.
+    *   **Semantic Similarity Check (if no keywords):** If no keywords are found, use a more nuanced semantic check:
+        *   Embed the user's query using the Google embedding model (`text-embedding-004`).
+        *   Embed a pre-defined **"anchor phrase"** (from `config.relevanceAnchorPhrase`) that represents the core scope of the chatbot (e.g., "Information about Lock Chun Chinese Cuisine restaurant including menu, food, hours, location, address, reservations, and ordering").
+        *   Calculate the **cosine similarity** between the user's query vector and the anchor phrase vector. This score measures how closely related the meanings of the two texts are.
+        *   Compare the calculated similarity score against a configurable **threshold** (`config.relevanceThreshold`).
+        *   If the score is above the threshold, the query is considered semantically relevant even without exact keywords.
+    *   Refuse if irrelevant (neither keywords nor sufficient semantic similarity).
 5.  **RAG Execution (if relevant):**
     *   **Retrieve:** Use query embedding to find the top `k` similar menu sections from Redis (vector search).
     *   **Augment:** Format retrieved text and inject it (`{context}`) along with the user's query (`{question}`) into the system prompt (`ragPromptTemplate`). The prompt guides the LLM and includes fallback rules.
@@ -189,11 +194,12 @@ Embeddings are numerical representations (vectors) of text that capture semantic
     *   Each menu section's text is converted into a vector and stored in Redis. This allows searching based on meaning, not just exact words.
 2.  **Semantic Relevance Check (in `api/chat`):**
     *   The user's query is embedded.
-    *   This query vector is compared to an "anchor" vector representing the bot's intended scope ("Lock Chun food, hours, location...").
-    *   High similarity means the query is likely relevant, even without specific keywords.
+    *   This query vector is compared to the vector of a pre-defined **"anchor phrase"** representing the bot's intended scope (e.g., "Information about Lock Chun Chinese Cuisine restaurant...").
+    *   The comparison is done using **cosine similarity**, which calculates the angle between the two vectors in high-dimensional space. A score close to 1 indicates high semantic similarity.
+    *   If the similarity score exceeds a defined threshold (`config.relevanceThreshold`), the query is deemed relevant, even if it doesn't contain specific keywords.
 3.  **Semantic Retrieval for RAG (in `api/chat`):**
     *   The user's query embedding is used to search Redis.
-    *   Redis finds the stored menu sections whose vectors are most similar (closest) to the query vector.
+    *   Redis finds the stored menu sections whose vectors are most similar (closest, typically using cosine similarity search) to the query vector.
     *   This ensures the most relevant menu context is retrieved to help the LLM answer accurately.
 
 ### Why RAG?
@@ -224,76 +230,3 @@ It provides the structure to build applications *around* LLMs efficiently.
 *   **Vector Search:** RediSearch module provides necessary vector indexing and search capabilities.
 *   **Mature & Scalable:** Well-supported and scalable database.
 *   **LangChain Integration:** Dedicated `@langchain/redis` package.
-
-## Setup & Installation
-
-1.  **Clone the repository:**
-    ```bash
-    git clone <your-repo-url>
-    cd <your-repo-directory>
-    ```
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    # or yarn install / pnpm install
-    ```
-3.  **Set up Environment Variables:**
-    Create `.env.local` in the project root:
-    ```env
-    # Get from Google AI Studio or Google Cloud Console
-    GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY"
-
-    # Get from your Redis provider (e.g., Redis Cloud, Upstash, self-hosted)
-    # Format: redis[s]://[[username][:password]@][host][:port][/db-number]
-    REDIS_URL="YOUR_REDIS_CONNECTION_URL"
-    ```
-    *   Ensure `GOOGLE_API_KEY` has Generative Language API access.
-    *   Ensure Redis has the RediSearch module enabled if needed.
-
-## Running the Project
-
-1.  **Populate the Redis Vector Store (Run once or when menu changes):**
-    *   Ensure `public/menu.json` is present and correct.
-    *   Run from the project root:
-        ```bash
-        npm run populate-redis
-        # or: npx tsx ./scripts/populate-redis.ts
-        ```
-2.  **Run the Next.js Development Server:**
-    ```bash
-    npm run dev
-    # or yarn dev / pnpm dev
-    ```
-3.  **Interact with the API (POST requests to `/api/chat`):**
-    *   **Example using `curl`:**
-        ```bash
-        # Ask about menu
-        curl -X POST http://localhost:3000/api/chat \
-             -H "Content-Type: application/json" \
-             -d '{"message": "What soups do you have?"}'
-
-        # Ask about hours (uses specific rule)
-        curl -X POST http://localhost:3000/api/chat \
-             -H "Content-Type: application/json" \
-             -d '{"message": "What are your hours?"}'
-
-        # Greeting
-        curl -X POST http://localhost:3000/api/chat \
-             -H "Content-Type: application/json" \
-             -d '{"message": "Hi there"}'
-
-        # Off-topic (should be refused)
-        curl -X POST http://localhost:3000/api/chat \
-             -H "Content-Type: application/json" \
-             -d '{"message": "Tell me about the history of china"}'
-        ```
-
-## Potential Improvements
-
-*   **Frontend UI:** Build a chat interface.
-*   **Conversation History:** Add memory for follow-up questions.
-*   **Error Handling:** More specific error handling/retries.
-*   **Advanced Relevance:** Fine-tune relevance threshold/model.
-*   **Streaming Responses:** Implement response streaming.
-*   **Testing:** Add unit and integration tests.
-*   **Configuration:** Externalize constants (index name, k value, threshold).

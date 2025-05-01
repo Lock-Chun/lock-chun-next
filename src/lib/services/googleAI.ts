@@ -1,13 +1,10 @@
-// /lib/services/googleAI.ts
 import { ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings } from "@langchain/google-genai";
-import { config } from "@/lib/config"; // Adjust path if needed (@/lib/...)
+import { config } from "@/lib/config";
 
 // Initialize and export the LLM instance
 export const model = new ChatGoogleGenerativeAI({
     apiKey: config.googleApiKey,
     model: config.llmModel,
-    // Add other parameters like temperature, topP if needed
-    // temperature: 0.7,
 });
 
 // Initialize and export the Embeddings instance

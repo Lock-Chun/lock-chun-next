@@ -1,11 +1,10 @@
-// /lib/chat/ragChain.ts
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { RunnablePassthrough, RunnableSequence } from "@langchain/core/runnables";
 import { formatDocumentsAsString } from "langchain/util/document";
-import { model } from "@/lib/services/googleAI"; // Import LLM model
-import { getVectorStore } from "@/lib/services/redis"; // Import function to get vector store
-import { ragPromptTemplate } from "./prompts"; // Import the prompt template
-import { config } from "@/lib/config"; // Import config for retriever K value
+import { model } from "@/lib/services/googleAI"; 
+import { getVectorStore } from "@/lib/services/redis"; 
+import { ragPromptTemplate } from "./prompts"; 
+import { config } from "@/lib/config"; 
 
 // Function to build the LangChain RAG RunnableSequence
 export function buildRagChain() {
@@ -40,13 +39,3 @@ export function buildRagChain() {
 
     return chain;
 }
-
-// Optional: Initialize the chain once globally if desired,
-// but ensure it only happens *after* Redis is confirmed ready.
-// let ragChainInstance: ReturnType<typeof buildRagChain> | undefined;
-// export function getRagChain(): ReturnType<typeof buildRagChain> {
-//     if (!ragChainInstance) {
-//         ragChainInstance = buildRagChain();
-//     }
-//     return ragChainInstance;
-// }
