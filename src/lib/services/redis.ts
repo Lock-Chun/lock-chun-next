@@ -19,7 +19,7 @@ async function initializeRedisInternal(): Promise<void> {
     console.log("Initializing Redis connection...");
     try {
         // Type assertion might be needed depending on specific redis version/types setup
-        const client = createClient({ url: config.redisUrl }) as any as RedisClientType;
+        const client = createClient({ url: config.redisUrl }) as RedisClientType;
 
         client.on("error", (e) => {
             console.error("Redis Client Background Error:", e);
