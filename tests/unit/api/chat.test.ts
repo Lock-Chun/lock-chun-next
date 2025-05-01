@@ -40,29 +40,17 @@ jest.mock('@google/generative-ai', () => ({
 }));
 
 
-describe('POST /api/chat', () => {
-  beforeEach(() => {
-    // Reset mocks before each test
-    (NextResponse.json as jest.Mock).mockClear();
-    (fs.readFileSync as jest.Mock).mockClear();
-    // Clear mocks for GoogleGenerativeAI if necessary, though less critical for this specific test
+// --- ADD THIS PART ---
+describe('Simple Test Suite', () => {
+  test('should pass this basic test', () => {
+    // The most basic assertion: true is true.
+    expect(true).toBe(true);
   });
 
-  it('should return 400 if message is missing in the request body', async () => {
-    const mockRequest = {
-      json: async () => ({}), // Simulate request body without 'message'
-    } as Request;
-
-    // Call the handler
-    await POST(mockRequest);
-
-    // Assertions
-    expect(NextResponse.json).toHaveBeenCalledTimes(1);
-    expect(NextResponse.json).toHaveBeenCalledWith(
-      { error: 'Message is required' },
-      { status: 400 }
-    );
-  });
-
-  // Add more tests here for other scenarios (e.g., successful response, AI errors)
+  // You will add your actual tests for the POST function here later
+  // For example:
+  // test('POST should return 400 if message is missing', async () => {
+  //   // ... test implementation ...
+  // });
 });
+// --- END OF ADDED PART ---

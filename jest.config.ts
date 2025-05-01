@@ -21,6 +21,11 @@ const customJestConfig: Config = {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
 
+  // Ensure specific ESM modules in node_modules are transformed
+  transformIgnorePatterns: [
+    '/node_modules/(?!redis|@langchain/redis)/',
+  ],
+
   // Paths to ignore during testing
   testPathIgnorePatterns: [
     '/node_modules/',

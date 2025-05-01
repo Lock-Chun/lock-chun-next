@@ -1,6 +1,5 @@
 // /lib/services/redis.ts
-import redisDefault from 'redis'; // Use default import for CJS compatibility
-const { createClient } = redisDefault; // Destructure createClient
+import { createClient } from 'redis';
 import type { RedisClientType } from "redis"; // Import type separately
 import { RedisVectorStore } from "@langchain/redis";
 import { embeddings } from "./googleAI"; // Import embeddings instance
