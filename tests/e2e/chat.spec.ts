@@ -36,7 +36,7 @@ test.describe('POST /api/chat', () => {
     // Check response body for error message
     const body = await response.json();
     expect(body).toHaveProperty('error');
-    expect(body.error).toBe('Message is required');
+    expect(body.error).toBe('Message is required and must be a non-empty string.');
   });
 
   // Add more tests here for other scenarios if needed
