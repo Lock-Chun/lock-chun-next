@@ -27,11 +27,13 @@ jobs:
         run: npm run build
         env: 
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          REDIS_URL: ${{ secrets.REDIS_URL }}
 
       - name: Run Playwright tests
         run: npx playwright test tests/e2e/
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          REDIS_URL: ${{ secrets.REDIS_URL }}
 
       - uses: actions/upload-artifact@v4
         if: always()
