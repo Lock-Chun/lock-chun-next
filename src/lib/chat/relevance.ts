@@ -8,6 +8,7 @@ const KEY_TERMS = [
   "chicken", "beef", "shrimp", "soup", "hours", "time", "open", "close",
   "reservation", "reserve", "pickup", "order", "phone", "location",
   "address", "directions", "lunch", "family", "dinner",
+  "food", // <-- Added "food" here
 ];
 
 // Define terms indicating a greeting
@@ -47,6 +48,7 @@ export function isGreeting(query: string): boolean {
 export async function isRelevant(question: string): Promise<boolean> {
   // 1. Keyword Check (Fastest)
   if (hasKeyword(question)) {
+    // console.log(`Keyword match found for: "${question}"`); // Optional debug log
     return true;
   }
 
@@ -81,10 +83,16 @@ export async function isRelevant(question: string): Promise<boolean> {
 
     const similarity = dotProduct / (questionMagnitude * anchorMagnitude);
 
-    // console.log(`Relevance score for "${question}": ${similarity.toFixed(3)}`); // Debugging
+    // console.log(`Semantic relevance score for "${question}": ${similarity.toFixed(3)}`); // Debugging
 
     // Check against the threshold from config
-    return similarity > config.relevanceThreshold;
+    const isSemanticallyRelevant = similarity > config.relevanceThreshold;
+    // if (isSemanticallyRelevant) {
+    //     console.log(`Semantic match found for: "${question}"`); // Optional debug log
+    // } else {
+    //     console.log(`No keyword or sufficient semantic match for: "${question}"`); // Optional debug log
+    // }
+    return isSemanticallyRelevant;
 
   } catch (error: unknown) {
       // Log error during embedding or calculation
