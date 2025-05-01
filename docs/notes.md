@@ -64,3 +64,9 @@ any
 Script
 - Component to load from Google and Initializing the script
 
+## Github Workflows / tests
+- Have to add keys in the .github files and add it to secrets
+- Should learn how to make tests and such
+
+## Chatbot
+- Read chatbot.md to know design process, etc.
