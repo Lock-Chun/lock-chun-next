@@ -1,901 +1,942 @@
 {
-    "Appetizer": [
-      {
-        "name": "Egg Roll",
-        "quantity": 3,
-        "price": 6.50,
-        "spicy": false
-      },
-      {
-        "name": "Fried Won Ton",
-        "quantity": 10,
-        "price": 4.95,
-        "spicy": false
-      },
-      {
-        "name": "Fried Shrimps",
-        "quantity": 8,
-        "price": 11.50,
-        "spicy": false
-      },
-      {
-        "name": "Potstickers",
-        "quantity": 6,
-        "price": 11.50,
-        "spicy": false
-      },
-      {
-        "name": "Chicken Salad",
-        "price": 14.50,
-        "spicy": false
-      },
-      {
-        "name": "Cream Cheese Won Tons",
-        "quantity": 6,
-        "price": 9.95,
-        "spicy": false
+  "Appetizer": [
+    {
+      "name": "Egg Roll",
+      "quantity": 3,
+      "price": 6.50,
+      "spicy": false
+    },
+    {
+      "name": "Fried Won Ton",
+      "quantity": 10,
+      "price": 4.95,
+      "spicy": false
+    },
+    {
+      "name": "Fried Shrimps",
+      "quantity": 8,
+      "price": 11.50,
+      "spicy": false
+    },
+    {
+      "name": "Potstickers",
+      "quantity": 6,
+      "price": 11.50,
+      "spicy": false
+    },
+    {
+      "name": "Chicken Salad",
+      "price": 14.50,
+      "spicy": false
+    },
+    {
+      "name": "Cream Cheese Won Tons",
+      "quantity": 6,
+      "price": 9.95,
+      "spicy": false
+    }
+  ],
+  "Soup": [
+    {
+      "name": "Hot & Sour Soup",
+      "spicy": true,
+      "prices": {
+        "S": 9.95,
+        "M": 13.50,
+        "L": 17.95
       }
-    ],
-    "Soup": [
-      {
-        "name": "Hot & Sour Soup",
-        "spicy": true,
-        "prices": {
-          "S": 9.95,
-          "M": 13.50,
-          "L": 17.95
-        }
-      },
-      {
-        "name": "Won Ton Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.75,
-          "M": 12.50,
-          "L": 16.95
-        }
-      },
-      {
-        "name": "Chicken with Cream Corn Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.75,
-          "M": 12.50,
-          "L": 16.95
-        }
-      },
-      {
-        "name": "Egg Flowers Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.75,
-          "M": 12.50,
-          "L": 16.95
-        }
-      },
-      {
-        "name": "Tofu & Vegetables Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.75,
-          "M": 12.50,
-          "L": 16.95
-        }
-      },
-      {
-        "name": "Wor Won Ton Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.95,
-          "M": 13.50,
-          "L": 17.95
-        }
-      },
-      {
-        "name": "Sizzling Rice Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.95,
-          "M": 13.50,
-          "L": 17.95
-        }
-      },
-      {
-        "name": "San Shen Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.95,
-          "M": 13.50,
-          "L": 17.95
-        }
-      },
-      {
-        "name": "Seafood with Tofu Soup",
-        "spicy": false,
-        "prices": {
-          "S": 9.95,
-          "M": 13.50,
-          "L": 17.95
-        }
+    },
+    {
+      "name": "Won Ton Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.75,
+        "M": 12.50,
+        "L": 16.95
       }
-    ],
-    "Seafood": [
-      {
-        "name": "Hot Braised Shrimps",
-        "spicy": true,
-        "price": 20.95
-      },
-      {
-        "name": "Hot & Sour Shrimps",
-        "spicy": true,
-        "price": 20.95
-      },
-      {
-        "name": "Kung Pao Shrimps",
-        "spicy": true,
-        "price": 20.95
-      },
-      {
-        "name": "Shrimps with Snow Pea",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Imperial Shrimp",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Shrimps with Mixed Vegetables",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Shrimps with Broccoli",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Shrimps with Lobster Sauce",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Cashew Shrimps",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Sweet & Sour Shrimps",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Hunan Shrimps",
-        "spicy": true,
-        "price": 20.95
-      },
-      {
-        "name": "Shrimp with Black Bean Sauce",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Curry Shrimps",
-        "spicy": true,
-        "price": 20.95
-      },
-      {
-        "name": "Scallops with Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 21.95
-      },
-      {
-        "name": "Kung Pao Scallops",
-        "spicy": true,
-        "price": 21.95
+    },
+    {
+      "name": "Chicken with Cream Corn Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.75,
+        "M": 12.50,
+        "L": 16.95
       }
-    ],
-    "Chicken": [
-      {
-        "name": "Moo Shu Chicken",
-        "details": "w/ 4 pancakes",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Mixed Vegetables",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Sesame Chicken",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Lemon Chicken",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Sweet & Sour Chicken",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Broccoli",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Snow Pea",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Black Mushroom",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Black Bean Sauce",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Cashew Chicken",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Hot & Sour Chicken",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Kung Pao Chicken",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "General’s Chicken",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Curry Chicken",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Mongolian Chicken",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with String Beans",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Chicken with Honey Walnuts",
-        "spicy": false,
-        "price": 18.95
+    },
+    {
+      "name": "Egg Flowers Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.75,
+        "M": 12.50,
+        "L": 16.95
       }
-    ],
-    "Beef": [
-      {
-        "name": "Mongolian Beef",
-        "spicy": true,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Chinese BBQ Sauce",
-        "spicy": true,
-        "price": 19.95
-      },
-      {
-        "name": "Beef w/ Black Mushroom & Bamboo Shoots",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Beef Broccoli",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Snow Pea",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Green Pepper",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Black Bean Sauce",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Sesame Beef",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Szechuan Beef",
-        "spicy": true,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Chinese Green",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with Tofu",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Szechuan Pepper Beef",
-        "spicy": true,
-        "price": 19.95
-      },
-      {
-        "name": "Kung Pao Beef",
-        "spicy": true,
-        "price": 19.95
-      },
-      {
-        "name": "Beef with String Beans",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Green Onion Beef",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Lock Chun Beef",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Tomato Beef",
-        "spicy": false,
-        "price": 19.95
+    },
+    {
+      "name": "Tofu & Vegetables Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.75,
+        "M": 12.50,
+        "L": 16.95
       }
-    ],
-    "Pork": [
-      {
-        "name": "Moo Shu Pork",
-        "details": "w/ 4 pancakes",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Sweet & Sour Pork",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Shredded Pork w/ Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Shredded Pork w/ Black Bean Sauce",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Twice Cooked Pork",
-        "spicy": true,
-        "price": 18.50
-      },
-      {
-        "name": "Grilled Pork w/ Dried Bean Curd",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Shredded Pork w/ Pickled Turnip",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Shredded Pork w/ Plum Sauce",
-        "spicy": false,
-        "price": 18.50
-      },
-      {
-        "name": "Salt & Pepper Spareribs",
-        "spicy": false,
-        "price": 18.50
+    },
+    {
+      "name": "Wor Won Ton Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.95,
+        "M": 13.50,
+        "L": 17.95
       }
-    ],
-    "Rice & Noodles": [
-      {
-        "name": "Vegetable Fried Rice",
-        "spicy": false,
-        "price": 12.95
-      },
-      {
-        "name": "Vegetable Chow Mein",
-        "spicy": false,
-        "price": 12.95
-      },
-      {
-        "name": "Chicken Fried Rice OR Chow Mein",
-        "spicy": false,
-        "price": 12.95
-      },
-      {
-        "name": "Beef Fried Rice OR Chow Mein",
-        "spicy": false,
-        "price": 12.95
-      },
-      {
-        "name": "BBQ Pork Fried Rice OR Chow Mein",
-        "spicy": false,
-        "price": 12.95
-      },
-      {
-        "name": "Shrimp Fried Rice OR Chow Mein",
-        "spicy": false,
-        "price": 13.50
-      },
-      {
-        "name": "Combination Fried Rice OR Chow Mein",
-        "spicy": false,
-        "price": 13.50
-      },
-      {
-        "name": "Beef Chow Fun",
-        "spicy": false,
-        "price": 13.50
-      },
-      {
-        "name": "Combination Chow Fun",
-        "spicy": false,
-        "price": 13.50
-      },
-      {
-        "name": "Steamed Rice (per person)",
-        "spicy": false,
-        "price": 1.95
+    },
+    {
+      "name": "Sizzling Rice Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.95,
+        "M": 13.50,
+        "L": 17.95
       }
-    ],
-    "Sizzling Platters": [
-      {
-        "name": "Sizzling Beef",
-        "spicy": false,
-        "price": 19.95
-      },
-      {
-        "name": "Sizzling Chicken",
-        "spicy": false,
-        "price": 19.50
-      },
-      {
-        "name": "Sizzling Shrimps",
-        "spicy": false,
-        "price": 20.95
-      },
-      {
-        "name": "Sizzling Three Delicacy (chicken, shrimp, scallops)",
-        "spicy": false,
-        "price": 20.75
+    },
+    {
+      "name": "San Shen Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.95,
+        "M": 13.50,
+        "L": 17.95
       }
-    ],
-    "Vegetable & Bean Curd": [
-      {
-        "name": "Moo Shu Vegetable",
-        "details": "w/ 4 pancakes",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Vegetable Combination",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Snow Pea & Bamboo Shoot w/ Black Mushroom",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Snow Pea w/ Water Chestnuts",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Straw Mushroom w/ Broccoli",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Broccoli w/ Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 16.95
-      },
-      {
-        "name": "Dried Shrimp w/ String Beans",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Bean Curd w/ Vegetables in Brown Sauce",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Hot Bean Curd Szechuan Style (w/ meat)",
-        "spicy": true,
-        "price": 16.95
-      },
-      {
-        "name": "Black Mushroom w/ Chinese Green",
-        "spicy": false,
-        "price": 16.95
-      },
-      {
-        "name": "Tofu w/ Vegetable in Kung Pao Sauce",
-        "spicy": true,
-        "price": 16.95
+    },
+    {
+      "name": "Seafood with Tofu Soup",
+      "spicy": false,
+      "prices": {
+        "S": 9.95,
+        "M": 13.50,
+        "L": 17.95
       }
-    ],
-    "Soup Noodles": [
-      {
-        "name": "Soup Noodles w/ Meat, Vegetables & Seafood",
-        "spicy": true,
-        "price": 16.50
-      },
-      {
-        "name": "Assorted Soup Noodles",
-        "spicy": false,
-        "price": 16.50
-      },
-      {
-        "name": "Soup Noodles w/ Shrimp, Scallops & Squid",
-        "spicy": false,
-        "price": 16.50
-      },
-      {
-        "name": "Won Ton Soup & Noodles",
-        "spicy": false,
-        "price": 16.50
-      },
-      {
-        "name": "Soup Noodles w/ Pork & Pickled Turnips",
-        "spicy": false,
-        "price": 16.50
-      },
-      {
-        "name": "Soup Noodles w/ Shredded Chicken & Snow Cabbage",
-        "spicy": false,
-        "price": 16.50
-      },
-      {
-        "name": "Noodles w/ Soy Bean Sauce",
-        "spicy": false,
-        "price": 16.50
-      },
-      {
-        "name": "Braised Sliced Fish Over Noodles",
-        "spicy": false,
-        "price": 16.50
+    }
+  ],
+  "Seafood": [
+    {
+      "name": "Hot Braised Shrimps",
+      "spicy": true,
+      "price": 20.95
+    },
+    {
+      "name": "Hot & Sour Shrimps",
+      "spicy": true,
+      "price": 20.95
+    },
+    {
+      "name": "Kung Pao Shrimps",
+      "spicy": true,
+      "price": 20.95
+    },
+    {
+      "name": "Shrimps with Snow Pea",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Imperial Shrimp",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Shrimps with Mixed Vegetables",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Shrimps with Broccoli",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Shrimps with Lobster Sauce",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Cashew Shrimps",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Sweet & Sour Shrimps",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Hunan Shrimps",
+      "spicy": true,
+      "price": 20.95
+    },
+    {
+      "name": "Shrimp with Black Bean Sauce",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Curry Shrimps",
+      "spicy": true,
+      "price": 20.95
+    },
+    {
+      "name": "Scallops with Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 21.95
+    },
+    {
+      "name": "Kung Pao Scallops",
+      "spicy": true,
+      "price": 21.95
+    }
+  ],
+  "Chicken": [
+    {
+      "name": "Moo Shu Chicken",
+      "details": "w/ 4 pancakes",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Mixed Vegetables",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Sesame Chicken",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Lemon Chicken",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Sweet & Sour Chicken",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Broccoli",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Snow Pea",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Black Mushroom",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Black Bean Sauce",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Cashew Chicken",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Hot & Sour Chicken",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Kung Pao Chicken",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "General’s Chicken",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Curry Chicken",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Mongolian Chicken",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with String Beans",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Chicken with Honey Walnuts",
+      "spicy": false,
+      "price": 18.95
+    }
+  ],
+  "Beef": [
+    {
+      "name": "Mongolian Beef",
+      "spicy": true,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Chinese BBQ Sauce",
+      "spicy": true,
+      "price": 19.95
+    },
+    {
+      "name": "Beef w/ Black Mushroom & Bamboo Shoots",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Beef Broccoli",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Snow Pea",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Green Pepper",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Black Bean Sauce",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Sesame Beef",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Szechuan Beef",
+      "spicy": true,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Chinese Green",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with Tofu",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Szechuan Pepper Beef",
+      "spicy": true,
+      "price": 19.95
+    },
+    {
+      "name": "Kung Pao Beef",
+      "spicy": true,
+      "price": 19.95
+    },
+    {
+      "name": "Beef with String Beans",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Green Onion Beef",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Lock Chun Beef",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Tomato Beef",
+      "spicy": false,
+      "price": 19.95
+    }
+  ],
+  "Pork": [
+    {
+      "name": "Moo Shu Pork",
+      "details": "w/ 4 pancakes",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Sweet & Sour Pork",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Shredded Pork w/ Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Shredded Pork w/ Black Bean Sauce",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Twice Cooked Pork",
+      "spicy": true,
+      "price": 18.50
+    },
+    {
+      "name": "Grilled Pork w/ Dried Bean Curd",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Shredded Pork w/ Pickled Turnip",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Shredded Pork w/ Plum Sauce",
+      "spicy": false,
+      "price": 18.50
+    },
+    {
+      "name": "Salt & Pepper Spareribs",
+      "spicy": false,
+      "price": 18.50
+    }
+  ],
+  "Rice & Noodles": [
+    {
+      "name": "Vegetable Fried Rice",
+      "spicy": false,
+      "price": 12.95
+    },
+    {
+      "name": "Vegetable Chow Mein",
+      "spicy": false,
+      "price": 12.95
+    },
+    {
+      "name": "Chicken Fried Rice OR Chow Mein",
+      "spicy": false,
+      "price": 12.95
+    },
+    {
+      "name": "Beef Fried Rice OR Chow Mein",
+      "spicy": false,
+      "price": 12.95
+    },
+    {
+      "name": "BBQ Pork Fried Rice OR Chow Mein",
+      "spicy": false,
+      "price": 12.95
+    },
+    {
+      "name": "Shrimp Fried Rice OR Chow Mein",
+      "spicy": false,
+      "price": 13.50
+    },
+    {
+      "name": "Combination Fried Rice OR Chow Mein",
+      "spicy": false,
+      "price": 13.50
+    },
+    {
+      "name": "Beef Chow Fun",
+      "spicy": false,
+      "price": 13.50
+    },
+    {
+      "name": "Combination Chow Fun",
+      "spicy": false,
+      "price": 13.50
+    },
+    {
+      "name": "Steamed Rice (per person)",
+      "spicy": false,
+      "price": 1.95
+    }
+  ],
+  "Sizzling Platters": [
+    {
+      "name": "Sizzling Beef",
+      "spicy": false,
+      "price": 19.95
+    },
+    {
+      "name": "Sizzling Chicken",
+      "spicy": false,
+      "price": 19.50
+    },
+    {
+      "name": "Sizzling Shrimps",
+      "spicy": false,
+      "price": 20.95
+    },
+    {
+      "name": "Sizzling Three Delicacy (chicken, shrimp, scallops)",
+      "spicy": false,
+      "price": 20.75
+    }
+  ],
+  "Vegetable & Bean Curd": [
+    {
+      "name": "Moo Shu Vegetable",
+      "details": "w/ 4 pancakes",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Vegetable Combination",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Snow Pea & Bamboo Shoot w/ Black Mushroom",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Snow Pea w/ Water Chestnuts",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Straw Mushroom w/ Broccoli",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Broccoli w/ Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 16.95
+    },
+    {
+      "name": "Dried Shrimp w/ String Beans",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Bean Curd w/ Vegetables in Brown Sauce",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Hot Bean Curd Szechuan Style (w/ meat)",
+      "spicy": true,
+      "price": 16.95
+    },
+    {
+      "name": "Black Mushroom w/ Chinese Green",
+      "spicy": false,
+      "price": 16.95
+    },
+    {
+      "name": "Tofu w/ Vegetable in Kung Pao Sauce",
+      "spicy": true,
+      "price": 16.95
+    }
+  ],
+  "Soup Noodles": [
+    {
+      "name": "Soup Noodles w/ Meat, Vegetables & Seafood",
+      "spicy": true,
+      "price": 16.50
+    },
+    {
+      "name": "Assorted Soup Noodles",
+      "spicy": false,
+      "price": 16.50
+    },
+    {
+      "name": "Soup Noodles w/ Shrimp, Scallops & Squid",
+      "spicy": false,
+      "price": 16.50
+    },
+    {
+      "name": "Won Ton Soup & Noodles",
+      "spicy": false,
+      "price": 16.50
+    },
+    {
+      "name": "Soup Noodles w/ Pork & Pickled Turnips",
+      "spicy": false,
+      "price": 16.50
+    },
+    {
+      "name": "Soup Noodles w/ Shredded Chicken & Snow Cabbage",
+      "spicy": false,
+      "price": 16.50
+    },
+    {
+      "name": "Noodles w/ Soy Bean Sauce",
+      "spicy": false,
+      "price": 16.50
+    },
+    {
+      "name": "Braised Sliced Fish Over Noodles",
+      "spicy": false,
+      "price": 16.50
+    }
+  ],
+  "Chef's Special": [
+    {
+      "name": "All Season Beef",
+      "spicy": true,
+      "price": 20.25
+    },
+    {
+      "name": "Hunan Beef",
+      "spicy": true,
+      "price": 20.25
+    },
+    {
+      "name": "Orange Peel Beef",
+      "spicy": true,
+      "price": 20.25
+    },
+    {
+      "name": "Peking Spareribs",
+      "spicy": false,
+      "price": 19.50
+    },
+    {
+      "name": "Orange Peel Chicken",
+      "spicy": true,
+      "price": 19.50
+    },
+    {
+      "name": "Hunan Chicken",
+      "spicy": true,
+      "price": 19.50
+    },
+    {
+      "name": "Szechuan Pepper Chicken",
+      "spicy": true,
+      "price": 19.50
+    },
+    {
+      "name": "Deep Fried Chicken Wings with Spicy Sauce",
+      "spicy": true,
+      "price": 19.50
+    },
+    {
+      "name": "Crispy Chicken (HALF)",
+      "spicy": false,
+      "price": 17.95
+    },
+    {
+      "name": "Salt & Pepper Prawns (IN SHELL)",
+      "spicy": true,
+      "price": 21.50
+    },
+    {
+      "name": "Shrimps with Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 21.50
+    },
+    {
+      "name": "Eggplant with Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 17.50
+    },
+    {
+      "name": "Dried Sauteed String Beans Szechuan Style",
+      "spicy": false,
+      "price": 17.50
+    },
+    {
+      "name": "Hunan Bean Curd",
+      "spicy": true,
+      "price": 17.50
+    },
+    {
+      "name": "Shrimps and Scallop Combination",
+      "spicy": false,
+      "price": 21.95
+    },
+    {
+      "name": "Kung Pao Three Delight",
+      "spicy": true,
+      "price": 21.95
+    },
+    {
+      "name": "Walnut Shrimps",
+      "spicy": false,
+      "price": 21.95
+    },
+    {
+      "name": "Sweet and Sour Beef with Special Sauce",
+      "spicy": false,
+      "price": 20.25
+    },
+    {
+      "name": "Pepper Salted Sliced Fish",
+      "spicy": false,
+      "price": 21.50
+    },
+    {
+      "name": "Hot Braised Sliced Fish",
+      "spicy": true,
+      "price": 21.50
+    },
+    {
+      "name": "Sweet & Sour Prawns with Special Sauce",
+      "spicy": false,
+      "price": 21.50
+    },
+    {
+      "name": "Sauteed Prawns",
+      "spicy": false,
+      "price": 21.50
+    },
+    {
+      "name": "Happy Family (seafood, meat, and veggies)",
+      "spicy": false,
+      "price": 21.50
+    },
+    {
+      "name": "Seafood Combination Szechuan Style",
+      "spicy": true,
+      "price": 21.95
+    }
+  ],
+  "Lunch Special": [
+    {
+      "name": "Shredded Pork w/ Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Twice Cooked Pork",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Sweet and Sour Pork",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Kung Pao Chicken",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Chicken w/ Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Chicken w/ Black Bean Sauce",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Chicken w/ Mixed Vegetables",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Chicken w/ Broccoli",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Sweet and Sour Chicken",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Lemon Chicken",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Cashew Chicken",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Curry Chicken",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Beef w/ Chinese BBQ Sauce",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Beef w/ Broccoli",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Mongolian Beef",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Beef w/ Black Bean Sauce",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Beef w/ Mixed Vegetables",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Snow Pea w/ Water Chestnuts",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Assorted Vegetables",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Curry Vegetables",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Tofu with Vegetables",
+      "spicy": false,
+      "price": 15.50
+    },
+    {
+      "name": "Vegetables Tofu w/ Kung Pao Sauce",
+      "spicy": true,
+      "price": 15.50
+    },
+    {
+      "name": "Shrimps w/ Spicy Garlic Sauce",
+      "spicy": true,
+      "price": 15.95
+    },
+    {
+      "name": "Shrimps w/ Black Bean Sauce",
+      "spicy": false,
+      "price": 15.95
+    },
+    {
+      "name": "Shrimps w/ Mixed Vegetables",
+      "spicy": false,
+      "price": 15.95
+    },
+    {
+      "name": "Hot Braised Shrimps",
+      "spicy": true,
+      "price": 15.95
+    },
+    {
+      "name": "Curry Shrimps",
+      "spicy": true,
+      "price": 15.95
+    },
+    {
+      "name": "Cashew Shrimps",
+      "spicy": false,
+      "price": 15.95
+    },
+    {
+      "name": "Kung Pao Shrimps",
+      "spicy": true,
+      "price": 15.95
+    },
+    {
+      "name": "Shrimps with Broccoli",
+      "spicy": false,
+      "price": 15.95
+    },
+    {
+      "name": "Mongolian Chicken",
+      "spicy": true,
+      "price": 15.75
+    },
+    {
+      "name": "String Bean with Chicken",
+      "spicy": false,
+      "price": 15.75
+    },
+    {
+      "name": "String Bean with Beef",
+      "spicy": false,
+      "price": 15.75
+    },
+    {
+      "name": "Tofu with Beef",
+      "spicy": false,
+      "price": 15.75
+    }
+  ],
+  "Family Dinners": [
+    {
+      "name": "Family Dinner (A)",
+      "price_per_person": 24.95,
+      "minimum_persons": 2,
+      "substitutions_allowed": false,
+      "description": "Served for two or more people only. No substitutions allowed.",
+      "base_items": [
+        "Won Ton Soup",
+        "Egg Roll & Fried Won Ton",
+        "Sweet & Sour Pork",
+        "Cashew Chicken",
+        "Steamed Rice"
+      ],
+      "additions_by_person": {
+        "3": "Broccoli Beef",
+        "4": "Shrimps w/ Lobster Sauce",
+        "5": "Hunan Chicken 🔥",
+        "6": "All Season Beef 🔥"
       }
-    ],
-    "Chef's Special": [
-      {
-        "name": "All Season Beef",
-        "spicy": true,
-        "price": 20.25
-      },
-      {
-        "name": "Hunan Beef",
-        "spicy": true,
-        "price": 20.25
-      },
-      {
-        "name": "Orange Peel Beef",
-        "spicy": true,
-        "price": 20.25
-      },
-      {
-        "name": "Peking Spareribs",
-        "spicy": false,
-        "price": 19.50
-      },
-      {
-        "name": "Orange Peel Chicken",
-        "spicy": true,
-        "price": 19.50
-      },
-      {
-        "name": "Hunan Chicken",
-        "spicy": true,
-        "price": 19.50
-      },
-      {
-        "name": "Szechuan Pepper Chicken",
-        "spicy": true,
-        "price": 19.50
-      },
-      {
-        "name": "Deep Fried Chicken Wings with Spicy Sauce",
-        "spicy": true,
-        "price": 19.50
-      },
-      {
-        "name": "Crispy Chicken (HALF)",
-        "spicy": false,
-        "price": 17.95
-      },
-      {
-        "name": "Salt & Pepper Prawns (IN SHELL)",
-        "spicy": true,
-        "price": 21.50
-      },
-      {
-        "name": "Shrimps with Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 21.50
-      },
-      {
-        "name": "Eggplant with Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 17.50
-      },
-      {
-        "name": "Dried Sauteed String Beans Szechuan Style",
-        "spicy": false,
-        "price": 17.50
-      },
-      {
-        "name": "Hunan Bean Curd",
-        "spicy": true,
-        "price": 17.50
-      },
-      {
-        "name": "Shrimps and Scallop Combination",
-        "spicy": false,
-        "price": 21.95
-      },
-      {
-        "name": "Kung Pao Three Delight",
-        "spicy": true,
-        "price": 21.95
-      },
-      {
-        "name": "Walnut Shrimps",
-        "spicy": false,
-        "price": 21.95
-      },
-      {
-        "name": "Sweet and Sour Beef with Special Sauce",
-        "spicy": false,
-        "price": 20.25
-      },
-      {
-        "name": "Pepper Salted Sliced Fish",
-        "spicy": false,
-        "price": 21.50
-      },
-      {
-        "name": "Hot Braised Sliced Fish",
-        "spicy": true,
-        "price": 21.50
-      },
-      {
-        "name": "Sweet & Sour Prawns with Special Sauce",
-        "spicy": false,
-        "price": 21.50
-      },
-      {
-        "name": "Sauteed Prawns",
-        "spicy": false,
-        "price": 21.50
-      },
-      {
-        "name": "Happy Family (seafood, meat, and veggies)",
-        "spicy": false,
-        "price": 21.50
-      },
-      {
-        "name": "Seafood Combination Szechuan Style",
-        "spicy": true,
-        "price": 21.95
+    },
+    {
+      "name": "Family Dinner (B)",
+      "price_per_person": 25.95,
+      "minimum_persons": 2,
+      "substitutions_allowed": false,
+      "description": "Served for two or more people only. No substitutions allowed.",
+      "base_items": [
+        "Hot & Sour Soup OR Won Ton Soup",
+        "Egg Roll & Fried Shrimps",
+        "Mongolian Beef 🔥",
+        "Lemon Chicken",
+        "BBQ Pork Fried Rice OR Steamed Rice"
+      ],
+      "additions_by_person": {
+        "3": "Peking Spareribs",
+        "4": "Shrimps w/ Spicy Garlic Sauce 🔥",
+        "5": "Moo Shu Chicken (w/ 4 pancakes)",
+        "6": "Orange Peel Beef 🔥"
       }
-    ],
-    "Lunch Special": [
-      {
-        "name": "Shredded Pork w/ Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Twice Cooked Pork",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Sweet and Sour Pork",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Kung Pao Chicken",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Chicken w/ Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Chicken w/ Black Bean Sauce",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Chicken w/ Mixed Vegetables",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Chicken w/ Broccoli",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Sweet and Sour Chicken",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Lemon Chicken",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Cashew Chicken",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Curry Chicken",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Beef w/ Chinese BBQ Sauce",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Beef w/ Broccoli",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Mongolian Beef",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Beef w/ Black Bean Sauce",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Beef w/ Mixed Vegetables",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Snow Pea w/ Water Chestnuts",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Assorted Vegetables",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Curry Vegetables",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Tofu with Vegetables",
-        "spicy": false,
-        "price": 15.50
-      },
-      {
-        "name": "Vegetables Tofu w/ Kung Pao Sauce",
-        "spicy": true,
-        "price": 15.50
-      },
-      {
-        "name": "Shrimps w/ Spicy Garlic Sauce",
-        "spicy": true,
-        "price": 15.95
-      },
-      {
-        "name": "Shrimps w/ Black Bean Sauce",
-        "spicy": false,
-        "price": 15.95
-      },
-      {
-        "name": "Shrimps w/ Mixed Vegetables",
-        "spicy": false,
-        "price": 15.95
-      },
-      {
-        "name": "Hot Braised Shrimps",
-        "spicy": true,
-        "price": 15.95
-      },
-      {
-        "name": "Curry Shrimps",
-        "spicy": true,
-        "price": 15.95
-      },
-      {
-        "name": "Cashew Shrimps",
-        "spicy": false,
-        "price": 15.95
-      },
-      {
-        "name": "Kung Pao Shrimps",
-        "spicy": true,
-        "price": 15.95
-      },
-      {
-        "name": "Shrimps with Broccoli",
-        "spicy": false,
-        "price": 15.95
-      },
-      {
-        "name": "Mongolian Chicken",
-        "spicy": true,
-        "price": 15.75
-      },
-      {
-        "name": "String Bean with Chicken",
-        "spicy": false,
-        "price": 15.75
-      },
-      {
-        "name": "String Bean with Beef",
-        "spicy": false,
-        "price": 15.75
-      },
-      {
-        "name": "Tofu with Beef",
-        "spicy": false,
-        "price": 15.75
-      }
-    ]
-  }
-  
+    }
+  ]
+}

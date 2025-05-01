@@ -2,6 +2,7 @@
   "name": "lock-chun-next",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -9,14 +10,22 @@
     "lint": "next lint",
     "test": "jest",
     "test:e2e": "playwright test",
-    "test:clear-cache": "jest --clearCache"
+    "test:clear-cache": "jest --clearCache",
+    "redis:populate": "ts-node --require dotenv/config scripts/populate-redis.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
+    "@langchain/community": "^0.3.42",
+    "@langchain/core": "^0.3.50",
+    "@langchain/google-genai": "^0.2.5",
+    "@langchain/redis": "^0.1.1",
+    "is-plain-obj": "^4.1.0",
+    "langchain": "^0.3.24",
     "next": "^15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-markdown": "^10.1.0"
+    "react-markdown": "^10.1.0",
+    "redis": "^4.7.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
