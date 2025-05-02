@@ -102,10 +102,10 @@ export default function Home() {
                 <div className="font-medium">Monday</div>
                 <div className="text-red-600 font-medium">CLOSED</div>
 
-                <div className="font-medium">Tuesday - Thursday</div>
+                <div className="font-medium">Tues - Thurs</div>
                 <div>11:30 AM - 8:30 PM</div>
 
-                <div className="font-medium">Friday - Saturday</div>
+                <div className="font-medium">Fri - Sat</div>
                 <div>11:30 AM - 9:00 PM</div>
 
                 <div className="font-medium">Sunday</div>
@@ -113,15 +113,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div className="flex items-center text-center justify-center md:justify-start">
               <Link
                 href="menu"
-                className="inline-block px-8 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-md transition-colors text-lg">
+                className="inline-block px-8 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-md transition-colors text-md md:text-lg">
                 View Menu
               </Link>
               <Link
                 href={googleMapsUrl}
-                className="inline-block ml-4 px-8 py-3 border border-stone-400 hover:border-stone-800 hover:bg-stone-200 text-stone-800 font-medium rounded-md transition-colors text-lg">
+                className="inline-block ml-4 px-8 py-3 border border-stone-400 hover:border-stone-800 hover:bg-stone-200 text-stone-800 font-medium rounded-md transition-colors text-md md:text-lg">
                 Get Directions
               </Link>
             </div>
