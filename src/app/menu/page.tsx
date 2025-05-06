@@ -1,9 +1,13 @@
 "use client"; // This is needed for Client Components
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 // Components
 import Navbar from "../components/navbar";
+import MenuItem from "../components/MenuItem";
+import CategoryHeader from "../components/CategoryHeader";
+import ScrollButtons from "../components/ScrollButtons";
 
 interface MenuItem {
   name: string;
@@ -20,54 +24,67 @@ interface Menu {
 
 export default function MenuPage() {
   const [menu, setMenu] = useState<Menu | null>(null);
+  const [categories, setCategories] = useState<string[]>([]);
 
   useEffect(() => {
     async function fetchMenu() {
       const res = await fetch("/menu.json");
       const data: Menu = await res.json();
       setMenu(data);
+      setCategories(Object.keys(data));
     }
     fetchMenu();
   }, []);
 
-  if (!menu) return (
-    <main>
-      <Navbar />
-      <p className="text-center text-(--foreground)">Loading menu...</p>
-    </main>
-  );
+  if (!menu)
+    return (
+      <main>
+        <Navbar />
+        <div className="max-w-3xl mx-auto p-6">
+          <h1 className="text-3xl font-bold text-center mb-6">
+            Restaurant Menu
+          </h1>
+          <div className="flex items-center justify-center gap-2">
+            <Image
+              src="/loading.gif"
+              width={20}
+              height={20}
+              alt="Loading icon"
+              unoptimized
+              priority
+            />
+            <p className="text-center text-(--foreground)">Loading menu...</p>
+          </div>
+        </div>
+      </main>
+    );
 
   return (
     <main>
       <Navbar />
-      <div className="max-w-3xl mx-auto p-6">
+      <div className="max-w-3xl md:max-w-5xl lg:max-w-7xl mx-auto p-6">
         <h1 className="text-3xl font-bold text-center mb-6">Restaurant Menu</h1>
-        {Object.entries(menu).map(([category, items]: [string, MenuItem[]]) => (
-          <div key={category} className="mb-8">
-            <h2 className="text-2xl font-semibold border-b-2 pb-2">{category}</h2>
-            <ul className="mt-4 space-y-4">
-              {items.map((item, index: number) => (
-                <li key={index} className="bg-gray-100 p-4 rounded-lg">
-                  <div className="flex justify-between">
-                    <div>
-                      <strong>{item.name}</strong> {item.spicy && <span className="text-red-500">🌶️</span>}
-                      {item.details && <span className="text-sm text-gray-600"> - {item.details}</span>}
-                      {item.quantity && <span className="text-sm text-gray-600"> ({item.quantity} pcs)</span>}
-                    </div>
-                    {item.price !== undefined && <span className="font-semibold">${item.price.toFixed(2)}</span>}
-                  </div>
-                  {item.prices && (
-                    <div className="mt-2 text-sm text-gray-700">
-                      Sizes: {Object.entries(item.prices).map(([size, price]) => (
-                        <span key={size} className="mr-2">{size}: ${price.toFixed(2)}</span>
-                      ))}
-                    </div>
+
+        {/* Add scroll buttons */}
+        <ScrollButtons categories={categories} />
+
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 mt-4">
+          {Object.entries(menu).map(
+            ([category, items]: [string, MenuItem[]]) => (
+              <div
+                key={category}
+                id={`category-${category}`} // Add ID for scroll targeting
+                className="mb-8">
+                <CategoryHeader category={category} />
+                <ul className="mt-(--standardMenuMargin) space-y-4">
+                  {items.map((item, index: number) =>
+                    MenuItem({ item, index })
                   )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                </ul>
+              </div>
+            )
+          )}
+        </div>
       </div>
     </main>
   );
