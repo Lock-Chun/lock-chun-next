@@ -3,10 +3,37 @@
 :root {
   --background: #fafaf9;
   --foreground: #292524;
+  --subforeground: #3e3836;
+  --subtext: #4a5565;
+
   --mobileNavbarSelected: #676463;
+
+  --standardGray: #f3f4f6;
+
+  --buttonSelectedBg: var(--foreground);
+  --buttonUnselectedBg: var(--standardGray);
+
+  --standardMenuMargin: calc(var(--spacing) * 2.5);
 }
 
+/* General global body styles, applies to all pages */
 body {
   color: var(--foreground);
   background: var(--background);
+}
+
+/* For smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* Adjust based on your navbar + scroll buttons height */
+}
+
+/* Hide scrollbar for scroll buttons */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
