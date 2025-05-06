@@ -14,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="relative flex items-center justify-between p-4 z-10">
+    <nav className="fixed top-0 w-full flex items-center justify-between p-4 z-10 bg-(--background) shadow-md">
       {/* Logo on the left */}
       <div className="lg:flex-shrink-0 z-20">
         <Link href="/">
@@ -125,3 +125,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

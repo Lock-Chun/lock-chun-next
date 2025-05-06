@@ -4,13 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
-  const address = "4495 Stevens Creek Blvd, Santa Clara, CA 95051";
+  const address = "Lock Chun Chinese Cuisine, Santa Clara CA";
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     address
   )}`;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-[77px]"> {/* Adjusted for Navbar height */}
       <Navbar />
 
       {/* Hero Section with Gradient Overlay */}
