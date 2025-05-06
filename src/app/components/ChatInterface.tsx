@@ -53,7 +53,6 @@ export default function ChatInterface() {
     },
   ]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -81,7 +80,6 @@ export default function ChatInterface() {
     setMessages((prevMessages) => [...prevMessages, userMessage]);
     setInputValue("");
     setIsLoading(true);
-    setError(null);
 
     try {
       const response = await fetch("/api/chat", {
@@ -103,7 +101,6 @@ export default function ChatInterface() {
     } catch (err: unknown) {
       console.error("Failed to send message:", err);
       const errorMessage = err instanceof Error ? err.message : "An unknown error occurred";
-      setError(`Failed to get response: ${errorMessage}`);
       // Add error message to chat
       const errorMessageObj: Message = {
         id: Date.now() + 2,
@@ -147,7 +144,6 @@ export default function ChatInterface() {
             </div>
           </div>
         )}
-        {/* Removed separate error display, now shown as a message */}
         <div ref={messagesEndRef} />
       </div>
 
