@@ -901,7 +901,6 @@
     {
       "name": "Family Dinner (A)",
       "price": 24.95,
-      "substitutions_allowed": false,
       "details": "Served for two or more people only. No substitutions allowed.",
       "base_items": [
         "Won Ton Soup",
@@ -920,7 +919,6 @@
     {
       "name": "Family Dinner (B)",
       "price": 25.95,
-      "substitutions_allowed": false,
       "details": "Served for two or more people only. No substitutions allowed.",
       "base_items": [
         "Hot & Sour Soup OR Won Ton Soup",
