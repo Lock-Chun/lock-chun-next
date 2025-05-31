@@ -7,9 +7,6 @@ export interface MenuItemProps {
   prices?: { [key: string]: number };
 
   // Family dinner props
-  minimum_persons?: number;
-  substitutions_allowed?: boolean;
-  description?: string;
   base_items?: string[];
   additions_by_person?: { [key: string]: string };
 }
